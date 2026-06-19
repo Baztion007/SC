@@ -1,0 +1,59 @@
+# Cloudflare Pages configuration for Spruce Construction (Next.js 16)
+
+# Build settings
+name = "spruce-construction"
+compatibility_date = "2025-01-01"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".vercel/output/static"
+
+# Build command uses the Cloudflare adapter to convert Next.js standalone
+# output into Cloudflare Pages-compatible assets.
+build_command = "npx @cloudflare/next-on-pages@1"
+
+# Environment variables (set in Cloudflare dashboard for production).
+# DATABASE_URL is optional for Cloudflare — the contact form will fall back
+# to a no-op if Prisma cannot reach a database. Use D1, Turso, or another
+# edge-compatible SQLite for production submissions.
+[vars]
+  NODE_VERSION = "20"
+
+# Cache static assets aggressively at the edge
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# SPA-style fallback so client-side routing always returns the app shell.
+# This project uses hash-less client-side state via Zustand, so all routes
+# resolve to "/" on Cloudflare Pages.
+[[redirects]]
+  from = "/portfolio"
+  to = "/"
+  status = 200
+
+[[redirects]]
+  from = "/services"
+  to = "/"
+  status = 200
+
+[[redirects]]
+  from = "/about"
+  to = "/"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/"
+  status = 200
