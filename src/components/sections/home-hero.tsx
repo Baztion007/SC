@@ -1,6 +1,7 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { useRef } from 'react'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import Image from 'next/image'
 import { ArrowRight, ArrowUpRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -8,18 +9,41 @@ import { useNavStore } from '@/lib/store'
 
 export function HomeHero() {
   const { setPage } = useNavStore()
+  const ref = useRef<HTMLDivElement>(null)
+
+  // Parallax: as the user scrolls, the background image translates slower than
+  // the foreground text, creating a depth effect. The image scales slightly to
+  // avoid revealing edges during the parallax translation.
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start start', 'end start'],
+  })
+  // Background moves up to 18% of its height slower than scroll, with a slight scale-up
+  const bgY = useTransform(scrollYProgress, [0, 1], ['0%', '20%'])
+  const bgScale = useTransform(scrollYProgress, [0, 1], [1.1, 1.25])
+  // Foreground text drifts up and fades as you scroll past the hero
+  const contentY = useTransform(scrollYProgress, [0, 0.8], ['0%', '12%'])
+  const contentOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0])
 
   return (
-    <section className="relative flex min-h-[88vh] items-center justify-center overflow-hidden">
-      {/* Full-bleed background image (matches sprucerva.com style) */}
-      <Image
-        src="/images/spruce-hero-original.jpg"
-        alt="A custom home built by Spruce Construction"
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover"
-      />
+    <section
+      ref={ref}
+      className="relative flex min-h-[88vh] items-center justify-center overflow-hidden"
+    >
+      {/* Full-bleed background image with parallax (matches sprucerva.com style + depth) */}
+      <motion.div
+        style={{ y: bgY, scale: bgScale }}
+        className="absolute inset-0 -z-10"
+      >
+        <Image
+          src="/images/spruce-hero-original.jpg"
+          alt="A custom home built by Spruce Construction"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+      </motion.div>
       {/* Subtle gradient overlay only at top and bottom for header/footer legibility.
           The middle stays clear so the image is visible — matching the real Spruce site. */}
       <div
@@ -32,7 +56,10 @@ export function HomeHero() {
       />
 
       {/* Centered text overlay — matches sprucerva.com hero treatment */}
-      <div className="relative z-10 mx-auto w-full max-w-5xl px-4 py-24 text-center sm:px-6 lg:px-8">
+      <motion.div
+        style={{ y: contentY, opacity: contentOpacity }}
+        className="relative z-10 mx-auto w-full max-w-5xl px-4 py-24 text-center sm:px-6 lg:px-8"
+      >
         <motion.span
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
@@ -86,13 +113,14 @@ export function HomeHero() {
             <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </button>
         </motion.div>
-      </div>
+      </motion.div>
 
-      {/* Subtle scroll cue */}
+      {/* Subtle scroll cue — fades out with the content as you scroll */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 0.8 }}
+        style={{ opacity: contentOpacity }}
         className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 md:block"
         aria-hidden="true"
       >
