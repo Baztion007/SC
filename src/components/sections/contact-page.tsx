@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Mail, MapPin, ExternalLink, ArrowUpRight, Quote } from 'lucide-react'
+import { Mail, MapPin, Phone, ExternalLink, ArrowUpRight, Quote } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { SectionHeading } from '@/components/section-heading'
 import { ContactForm } from '@/components/sections/contact-form'
@@ -73,6 +73,15 @@ export function ContactPage() {
                       {CONTACT_INFO.email}
                     </a>
                   </li>
+                  <li>
+                    <a
+                      href={CONTACT_INFO.phoneHref}
+                      className="flex items-center gap-2.5 text-foreground/80 transition-colors hover:text-primary"
+                    >
+                      <Phone className="size-4 shrink-0 text-primary" aria-hidden="true" />
+                      {CONTACT_INFO.phone}
+                    </a>
+                  </li>
                 </ul>
               </div>
 
@@ -121,14 +130,16 @@ export function ContactPage() {
       {/* Map */}
       <section className="border-t border-border bg-secondary/30">
         <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 md:py-16 lg:px-8">
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <MapPin className="size-4 text-primary" aria-hidden="true" />
-            <span>526 N. Arthur Ashe Blvd., Richmond, Virginia 23220</span>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground">
+            <span className="flex items-center gap-2">
+              <MapPin className="size-4 text-primary" aria-hidden="true" />
+              {CONTACT_INFO.addressShort}
+            </span>
             <a
               href={`https://maps.google.com/?q=${encodeURIComponent(CONTACT_INFO.address)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-2 inline-flex items-center gap-1 text-primary hover:underline"
+              className="inline-flex items-center gap-1 text-primary hover:underline"
             >
               Open in Maps
               <ExternalLink className="size-3" />

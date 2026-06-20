@@ -18,31 +18,14 @@ import {
   SelectValue,
 } from '@/components/ui/select'
 import { cn } from '@/lib/utils'
-
-const timingOptions = [
-  'ASAP',
-  'Within 3 months',
-  '3-6 months',
-  '6-12 months',
-  '12+ months',
-  'Just exploring',
-]
-
-const budgetOptions = [
-  'Under $250k',
-  '$250k - $500k',
-  '$500k - $750k',
-  '$750k - $1M',
-  '$1M - $2M',
-  '$2M+',
-  'Prefer to discuss',
-]
+import { projectTypeOptions, timingOptions, budgetOptions } from '@/lib/content'
 
 const schema = z.object({
   firstName: z.string().min(1, 'First name is required').max(80),
   lastName: z.string().min(1, 'Last name is required').max(80),
   email: z.string().min(1, 'Email is required').email('Please enter a valid email'),
   phone: z.string().max(40).optional().or(z.literal('')),
+  projectType: z.string().optional(),
   timing: z.string().optional(),
   budget: z.string().optional(),
   message: z
@@ -70,12 +53,14 @@ export function ContactForm() {
       lastName: '',
       email: '',
       phone: '',
+      projectType: '',
       timing: '',
       budget: '',
       message: '',
     },
   })
 
+  const projectType = watch('projectType')
   const timing = watch('timing')
   const budget = watch('budget')
 
@@ -144,25 +129,44 @@ export function ContactForm() {
         </Field>
       </div>
 
-      <Field label="Email" htmlFor="email" required error={errors.email?.message}>
-        <Input
-          id="email"
-          type="email"
-          autoComplete="email"
-          placeholder="jane@example.com"
-          aria-invalid={!!errors.email}
-          {...register('email')}
-        />
-      </Field>
+      <div className="grid gap-4 sm:grid-cols-2">
+        <Field label="Email" htmlFor="email" required error={errors.email?.message}>
+          <Input
+            id="email"
+            type="email"
+            autoComplete="email"
+            placeholder="jane@example.com"
+            aria-invalid={!!errors.email}
+            {...register('email')}
+          />
+        </Field>
+        <Field label="Phone" htmlFor="phone" error={errors.phone?.message} optional>
+          <Input
+            id="phone"
+            type="tel"
+            autoComplete="tel"
+            placeholder="(804) 555-0100"
+            {...register('phone')}
+          />
+        </Field>
+      </div>
 
-      <Field label="Phone" htmlFor="phone" error={errors.phone?.message} optional>
-        <Input
-          id="phone"
-          type="tel"
-          autoComplete="tel"
-          placeholder="(804) 555-0100"
-          {...register('phone')}
-        />
+      <Field label="What are you considering?" htmlFor="projectType" optional>
+        <Select
+          value={projectType}
+          onValueChange={(v) => setValue('projectType', v, { shouldValidate: false })}
+        >
+          <SelectTrigger id="projectType" className="w-full">
+            <SelectValue placeholder="Select project type" />
+          </SelectTrigger>
+          <SelectContent>
+            {projectTypeOptions.map((opt) => (
+              <SelectItem key={opt} value={opt}>
+                {opt}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
       </Field>
 
       <div className="grid gap-4 sm:grid-cols-2">
@@ -268,3 +272,4 @@ function Field({ label, htmlFor, required, optional, error, children }: FieldPro
     </div>
   )
 }
+

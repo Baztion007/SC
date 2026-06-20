@@ -10,6 +10,7 @@ const contactSchema = z.object({
   lastName: z.string().min(1).max(80),
   email: z.string().email().max(254),
   phone: z.string().max(40).optional().or(z.literal('')),
+  projectType: z.string().max(80).optional().or(z.literal('')),
   timing: z.string().max(80).optional().or(z.literal('')),
   budget: z.string().max(80).optional().or(z.literal('')),
   message: z.string().min(10).max(5000),
@@ -81,6 +82,7 @@ export async function POST(req: Request) {
         lastName: parsed.data.lastName,
         email: parsed.data.email,
         phone: parsed.data.phone || null,
+        projectType: parsed.data.projectType || null,
         timing: parsed.data.timing || null,
         budget: parsed.data.budget || null,
         message: parsed.data.message,
@@ -119,6 +121,7 @@ async function notifyTeam(data: {
   lastName: string
   email: string
   phone?: string
+  projectType?: string
   timing?: string
   budget?: string
   message: string
@@ -131,6 +134,7 @@ async function notifyTeam(data: {
     `Name: ${data.firstName} ${data.lastName}`,
     `Email: ${data.email}`,
     data.phone ? `Phone: ${data.phone}` : null,
+    data.projectType ? `Project type: ${data.projectType}` : null,
     data.timing ? `Timing: ${data.timing}` : null,
     data.budget ? `Budget: ${data.budget}` : null,
     ``,

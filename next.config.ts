@@ -12,7 +12,11 @@ const nextConfig: NextConfig = {
   },
   images: {
     formats: ["image/avif", "image/webp"],
-    remotePatterns: [],
+    remotePatterns: [
+      { protocol: "https", hostname: "i.postimg.cc" },
+      { protocol: "https", hostname: "postimg.cc" },
+      { protocol: "https", hostname: "r2cdn.perplexity.ai" },
+    ],
     // Allow unoptimized images as a fallback for static-export deployments
     // (GitHub Pages). When using the Next.js image optimizer (default on
     // Netlify/Cloudflare/Vercel), this stays false.

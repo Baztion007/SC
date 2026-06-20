@@ -369,12 +369,39 @@ export const CONTACT_INFO = {
   address: '526 N. Arthur Ashe Blvd., Richmond, Virginia 23220',
   addressShort: '526 N. Arthur Ashe Blvd., Richmond, VA 23220',
   email: 'carey@sprucerva.com',
+  phone: '(804) 555-0100',
+  phoneHref: 'tel:+18045550100',
   instagram: '@spruce_rva',
   instagramUrl: 'https://www.instagram.com/spruce_rva',
   boscobelUrl: 'https://www.boscobeltrace.com',
   mapEmbedUrl:
     'https://www.openstreetmap.org/export/embed.html?bbox=-77.487%2C37.555%2C-77.467%2C37.565&layer=mapnik&marker=37.5605%2C-77.477',
 }
+
+export const projectTypeOptions = [
+  'New Build',
+  'Whole-Home Renovation',
+  'Not sure yet',
+]
+
+export const timingOptions = [
+  'ASAP',
+  'Within 3 months',
+  '3-6 months',
+  '6-12 months',
+  '12+ months',
+  'Just exploring',
+]
+
+export const budgetOptions = [
+  'Under $250k',
+  '$250k - $500k',
+  '$500k - $750k',
+  '$750k - $1M',
+  '$1M - $2M',
+  '$2M+',
+  'Prefer to discuss',
+]
 
 export const NAV_ITEMS: { id: 'home' | 'portfolio' | 'services' | 'about' | 'contact'; label: string }[] = [
   { id: 'home', label: 'Home' },

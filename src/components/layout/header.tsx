@@ -2,11 +2,10 @@
 
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, Moon, Sun } from 'lucide-react'
-import { useTheme } from 'next-themes'
+import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetDescription } from '@/components/ui/sheet'
-import { Logo } from '@/components/logo'
+import { LogoImage } from '@/components/logo-image'
 import { useNavStore } from '@/lib/store'
 import { NAV_ITEMS } from '@/lib/content'
 import { cn } from '@/lib/utils'
@@ -14,15 +13,6 @@ import { cn } from '@/lib/utils'
 export function Header() {
   const { currentPage, setPage, mobileMenuOpen, setMobileMenuOpen } = useNavStore()
   const [scrolled, setScrolled] = useState(false)
-  const { theme, setTheme } = useTheme()
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    // next-themes requires mounted state to avoid hydration mismatch
-    // when rendering the theme toggle button. This is the documented pattern.
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setMounted(true)
-  }, [])
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8)
@@ -38,7 +28,7 @@ export function Header() {
       className={cn(
         'sticky top-0 z-50 w-full transition-all duration-300',
         scrolled
-          ? 'border-b border-border/70 bg-background/85 backdrop-blur-md shadow-sm'
+          ? 'border-b border-border/70 bg-background/90 backdrop-blur-md shadow-sm'
           : 'border-b border-transparent bg-background/0'
       )}
     >
@@ -48,7 +38,7 @@ export function Header() {
           aria-label="Spruce Construction - Home"
           className="transition-opacity hover:opacity-80"
         >
-          <Logo />
+          <LogoImage variant="header" priority />
         </button>
 
         {/* Desktop nav */}
@@ -75,17 +65,6 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          {mounted && (
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-              aria-label="Toggle theme"
-              className="hidden md:inline-flex"
-            >
-              {theme === 'dark' ? <Sun className="size-4" /> : <Moon className="size-4" />}
-            </Button>
-          )}
           <Button
             size="sm"
             onClick={() => go('contact')}
@@ -112,7 +91,7 @@ export function Header() {
         <SheetContent side="right" className="w-full max-w-sm p-0">
           <SheetHeader className="border-b border-border p-6">
             <div className="flex items-center justify-between">
-              <Logo />
+              <LogoImage variant="header" />
               <Button
                 variant="ghost"
                 size="icon"
@@ -147,24 +126,12 @@ export function Header() {
               </motion.button>
             ))}
 
-            <div className="mt-6 flex items-center gap-2">
-              {mounted && (
-                <Button
-                  variant="outline"
-                  size="icon"
-                  onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                  aria-label="Toggle theme"
-                >
-                  {theme === 'dark' ? <Sun className="size-4" /> : <Moon className="size-4" />}
-                </Button>
-              )}
-              <Button
-                className="flex-1"
-                onClick={() => go('contact')}
-              >
-                Start your project
-              </Button>
-            </div>
+            <Button
+              className="mt-6 w-full"
+              onClick={() => go('contact')}
+            >
+              Start your project
+            </Button>
           </nav>
         </SheetContent>
       </Sheet>

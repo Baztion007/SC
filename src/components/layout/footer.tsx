@@ -1,7 +1,7 @@
 'use client'
 
-import { Mail, MapPin, Instagram, ExternalLink, ArrowUpRight } from 'lucide-react'
-import { Logo } from '@/components/logo'
+import { Mail, MapPin, Phone, Instagram, ExternalLink, ArrowUpRight } from 'lucide-react'
+import { LogoImage } from '@/components/logo-image'
 import { useNavStore } from '@/lib/store'
 import { CONTACT_INFO, NAV_ITEMS } from '@/lib/content'
 
@@ -14,7 +14,7 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-3 md:gap-8">
           {/* Brand + tagline */}
           <div className="space-y-4">
-            <Logo />
+            <LogoImage variant="footer" />
             <p className="max-w-xs text-sm text-muted-foreground text-pretty">
               Custom residential homebuilder in Richmond &amp; the Northern Neck of Virginia.
             </p>
@@ -81,6 +81,13 @@ export function Footer() {
               >
                 <Mail className="size-4 shrink-0 text-primary" />
                 {CONTACT_INFO.email}
+              </a>
+              <a
+                href={CONTACT_INFO.phoneHref}
+                className="flex items-center gap-2 text-sm text-foreground/80 transition-colors hover:text-primary"
+              >
+                <Phone className="size-4 shrink-0 text-primary" />
+                {CONTACT_INFO.phone}
               </a>
             </address>
           </div>
