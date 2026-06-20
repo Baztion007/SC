@@ -187,3 +187,34 @@ Work Log:
 
 Stage Summary:
 - All user-requested changes complete and verified. Light theme only (no toggle). Real Spruce logos from postimg.cc in header and footer. Parallax hero implemented with proper text contrast and dual CTA buttons. Additional improvements: project type field in contact form, phone number, 404 page, loading state.
+
+---
+Task ID: 13
+Agent: main (orchestrator)
+Task: Redesign hero to match sprucerva.com style - centered text on visible background image
+
+Work Log:
+- Used web-reader skill (z-ai page_reader function) to fetch and analyze https://www.sprucerva.com/
+- Identified Spruce's actual hero style: full-bleed background image (Cragmont project kitchen photo) with centered lowercase text overlay
+- Found and downloaded the actual Spruce hero image (9211 Cragmont Dr kitchen interior) from squarespace-cdn to /public/images/spruce-hero-original.jpg
+- Previous parallax hero had two problems: (1) dark overlay was too heavy making the image invisible, (2) text was left-aligned leaving right side empty
+- Rebuilt home-hero.tsx with Spruce-matching style:
+  * Full-bleed background image (Next/Image fill, object-cover) - image clearly visible
+  * Subtle gradient overlay only at top (45%) and bottom (55%) for header/footer legibility, middle stays clear (15%) so image is visible
+  * Centered text overlay: eyebrow badge, h1 headline (white + emerald accent), subhead, two CTAs
+  * Used actual Spruce copy: "Specializing in bespoke, built-to-last new builds and whole-home renovations. Professionalism, craftsmanship, and excellence at every step in the process define the Spruce experience."
+  * Primary CTA: spruce green (bg-primary) with shadow + ring for strong visual hierarchy
+  * Secondary CTA: transparent with white border + backdrop blur
+  * Subhead: bright white with font-medium + drop-shadow for contrast against bright kitchen image
+  * Scroll cue at bottom (desktop only)
+- Verified with Agent Browser on desktop (1440x900) and mobile (390x844):
+  * Background kitchen image clearly visible on both viewports
+  * Text centered and readable
+  * Primary button is spruce green, distinctly different from secondary
+  * Subhead is bright white (not gray)
+  * No empty space issues
+  * Looks polished and professional
+- Lint passes clean
+
+Stage Summary:
+- Hero now matches sprucerva.com style: centered text overlay on visible full-bleed background image. The actual Spruce kitchen photo (Cragmont project) is used. Empty right-side issue resolved. Spruce green primary CTA provides strong visual hierarchy. Verified on desktop and mobile.
