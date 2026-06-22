@@ -234,21 +234,22 @@ export interface TeamMember {
   name: string
   role: string
   initials: string
+  photo?: string
 }
 
 export const team: TeamMember[] = [
-  { name: 'Jordan Hutchins', role: 'Founder', initials: 'JH' },
-  { name: 'Michael Hyatt', role: 'Construction Manager', initials: 'MH' },
-  { name: 'Christi McFadden', role: 'Selections Manager', initials: 'CM' },
-  { name: 'Shannon Easter', role: 'Office Manager', initials: 'SE' },
-  { name: 'Ian Hoyt', role: 'Development Manager', initials: 'IH' },
-  { name: 'Carey Hutchins', role: 'Design & Marketing', initials: 'CH' },
-  { name: 'Mike Poole', role: 'Project Manager RVA', initials: 'MP' },
-  { name: 'Rachel Briggs', role: 'Selections Coordinator', initials: 'RB' },
-  { name: 'Brandon Hendrix', role: 'Project Manager RVA', initials: 'BH' },
-  { name: 'Dylan Szalankiewicz', role: 'Cost Estimator', initials: 'DS' },
-  { name: 'Mark Strawn', role: 'Project Manager River', initials: 'MS' },
-  { name: 'Lee Wood', role: 'Project Manager River', initials: 'LW' },
+  { name: 'Jordan Hutchins', role: 'Founder', initials: 'JH', photo: '/images/team/jordan-hutchins.png' },
+  { name: 'Michael Hyatt', role: 'Construction Manager', initials: 'MH', photo: '/images/team/michael-hyatt.png' },
+  { name: 'Christi McFadden', role: 'Selections Manager', initials: 'CM', photo: '/images/team/christi-mcfadden.png' },
+  { name: 'Shannon Easter', role: 'Office Manager', initials: 'SE', photo: '/images/team/shannon-easter.png' },
+  { name: 'Ian Hoyt', role: 'Development Manager', initials: 'IH', photo: '/images/team/ian-hoyt.png' },
+  { name: 'Carey Hutchins', role: 'Design & Marketing', initials: 'CH', photo: '/images/team/carey-hutchins.png' },
+  { name: 'Mike Poole', role: 'Project Manager RVA', initials: 'MP', photo: '/images/team/mike-poole.png' },
+  { name: 'Rachel Briggs', role: 'Selections Coordinator', initials: 'RB', photo: '/images/team/rachel-briggs.png' },
+  { name: 'Brandon Hendrix', role: 'Project Manager RVA', initials: 'BH', photo: '/images/team/brandon-hendrix.png' },
+  { name: 'Dylan Szalankiewicz', role: 'Cost Estimator', initials: 'DS', photo: '/images/team/dylan-szalankiewicz.png' },
+  { name: 'Mark Strawn', role: 'Project Manager River', initials: 'MS', photo: '/images/team/mark-strawn.png' },
+  { name: 'Lee Wood', role: 'Project Manager River', initials: 'LW', photo: '/images/team/lee-wood.png' },
 ]
 
 // Process steps

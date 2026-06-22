@@ -28,10 +28,11 @@ export function HomeHero() {
   return (
     <section
       ref={ref}
-      className="relative flex min-h-[88vh] items-center justify-center overflow-hidden bg-[#1a2420]"
+      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#1a2420]"
     >
       {/* Full-bleed background image with parallax (matches sprucerva.com style + depth).
-          The section has a dark fallback bg (#1a2420) so text is readable even if the image fails. */}
+          The section has a dark fallback bg (#1a2420) so text is readable even if the image fails.
+          min-h-screen makes the image fill the entire viewport (behind the transparent header). */}
       <motion.div
         style={{ y: bgY, scale: bgScale }}
         className="absolute inset-0 z-0"

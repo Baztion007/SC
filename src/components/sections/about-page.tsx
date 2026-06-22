@@ -77,15 +77,32 @@ export function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-60px' }}
                 transition={{ duration: 0.4, delay: Math.min((idx % 4) * 0.06, 0.24) }}
-                className="group overflow-hidden rounded-xl border border-border/60 bg-card p-5 transition-shadow hover:shadow-md"
+                className="group overflow-hidden rounded-xl border border-border/60 bg-card transition-shadow hover:shadow-md"
               >
-                <div className="flex size-16 items-center justify-center rounded-full bg-gradient-to-br from-primary/15 to-primary/5 font-serif text-xl font-semibold text-primary">
-                  {member.initials}
+                {/* Photo with initials fallback */}
+                <div className="relative aspect-[4/5] w-full overflow-hidden bg-secondary">
+                  {member.photo ? (
+                    <Image
+                      src={member.photo}
+                      alt={`${member.name} — ${member.role}`}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 25vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  ) : (
+                    <div className="flex size-full items-center justify-center bg-gradient-to-br from-primary/15 to-primary/5 font-serif text-3xl font-semibold text-primary">
+                      {member.initials}
+                    </div>
+                  )}
                 </div>
-                <h3 className="mt-4 font-serif text-lg font-semibold tracking-tight">
-                  {member.name}
-                </h3>
-                <p className="text-sm text-muted-foreground">{member.role}</p>
+                <div className="p-4">
+                  <h3 className="font-serif text-base font-semibold tracking-tight">
+                    {member.name}
+                  </h3>
+                  <p className="mt-0.5 text-xs uppercase tracking-wide text-muted-foreground">
+                    {member.role}
+                  </p>
+                </div>
               </motion.div>
             ))}
           </div>
