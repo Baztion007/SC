@@ -238,18 +238,18 @@ export interface TeamMember {
 }
 
 export const team: TeamMember[] = [
-  { name: 'Jordan Hutchins', role: 'Founder', initials: 'JH', photo: '/images/team/jordan-hutchins.png' },
-  { name: 'Michael Hyatt', role: 'Construction Manager', initials: 'MH', photo: '/images/team/michael-hyatt.png' },
-  { name: 'Christi McFadden', role: 'Selections Manager', initials: 'CM', photo: '/images/team/christi-mcfadden.png' },
-  { name: 'Shannon Easter', role: 'Office Manager', initials: 'SE', photo: '/images/team/shannon-easter.png' },
-  { name: 'Ian Hoyt', role: 'Development Manager', initials: 'IH', photo: '/images/team/ian-hoyt.png' },
-  { name: 'Carey Hutchins', role: 'Design & Marketing', initials: 'CH', photo: '/images/team/carey-hutchins.png' },
-  { name: 'Mike Poole', role: 'Project Manager RVA', initials: 'MP', photo: '/images/team/mike-poole.png' },
-  { name: 'Rachel Briggs', role: 'Selections Coordinator', initials: 'RB', photo: '/images/team/rachel-briggs.png' },
-  { name: 'Brandon Hendrix', role: 'Project Manager RVA', initials: 'BH', photo: '/images/team/brandon-hendrix.png' },
-  { name: 'Dylan Szalankiewicz', role: 'Cost Estimator', initials: 'DS', photo: '/images/team/dylan-szalankiewicz.png' },
-  { name: 'Mark Strawn', role: 'Project Manager River', initials: 'MS', photo: '/images/team/mark-strawn.png' },
-  { name: 'Lee Wood', role: 'Project Manager River', initials: 'LW', photo: '/images/team/lee-wood.png' },
+  { name: 'Jordan Hutchins', role: 'Founder', initials: 'JH', photo: '/images/team/jordan-hutchins.jpg' },
+  { name: 'Michael Hyatt', role: 'Construction Manager', initials: 'MH', photo: '/images/team/michael-hyatt.jpg' },
+  { name: 'Christi McFadden', role: 'Selections Manager', initials: 'CM', photo: '/images/team/christi-mcfadden.jpg' },
+  { name: 'Shannon Easter', role: 'Office Manager', initials: 'SE', photo: '/images/team/shannon-easter.jpg' },
+  { name: 'Ian Hoyt', role: 'Development Manager', initials: 'IH', photo: '/images/team/ian-hoyt.jpg' },
+  { name: 'Carey Hutchins', role: 'Design & Marketing', initials: 'CH', photo: '/images/team/carey-hutchins.jpg' },
+  { name: 'Mike Poole', role: 'Project Manager RVA', initials: 'MP', photo: '/images/team/mike-poole.jpg' },
+  { name: 'Rachel Briggs', role: 'Selections Coordinator', initials: 'RB', photo: '/images/team/rachel-briggs.jpg' },
+  { name: 'Brandon Hendrix', role: 'Project Manager RVA', initials: 'BH', photo: '/images/team/brandon-hendrix.jpg' },
+  { name: 'Dylan Szalankiewicz', role: 'Cost Estimator', initials: 'DS', photo: '/images/team/dylan-szalankiewicz.jpg' },
+  { name: 'Mark Strawn', role: 'Project Manager River', initials: 'MS', photo: '/images/team/mark-strawn.jpg' },
+  { name: 'Lee Wood', role: 'Project Manager River', initials: 'LW', photo: '/images/team/lee-wood.jpg' },
 ]
 
 // Process steps
