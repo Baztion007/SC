@@ -28,15 +28,16 @@ export function HomeHero() {
   return (
     <section
       ref={ref}
-      className="relative flex min-h-[88vh] items-center justify-center overflow-hidden"
+      className="relative flex min-h-[88vh] items-center justify-center overflow-hidden bg-[#1a2420]"
     >
-      {/* Full-bleed background image with parallax (matches sprucerva.com style + depth) */}
+      {/* Full-bleed background image with parallax (matches sprucerva.com style + depth).
+          The section has a dark fallback bg (#1a2420) so text is readable even if the image fails. */}
       <motion.div
         style={{ y: bgY, scale: bgScale }}
-        className="absolute inset-0 -z-10"
+        className="absolute inset-0 z-0"
       >
         <Image
-          src="/images/spruce-hero-original.jpg"
+          src="/images/hero-bg.jpg"
           alt="A custom home built by Spruce Construction"
           fill
           priority
@@ -44,13 +45,13 @@ export function HomeHero() {
           className="object-cover"
         />
       </motion.div>
-      {/* Subtle gradient overlay only at top and bottom for header/footer legibility.
-          The middle stays clear so the image is visible — matching the real Spruce site. */}
+      {/* Gradient overlay for text legibility. Slightly stronger than before so
+          white text is always readable even on bright image areas. */}
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 z-0"
         style={{
           background:
-            'linear-gradient(180deg, rgba(20,28,24,0.45) 0%, rgba(20,28,24,0.15) 30%, rgba(20,28,24,0.15) 70%, rgba(20,28,24,0.55) 100%)',
+            'linear-gradient(180deg, rgba(20,28,24,0.55) 0%, rgba(20,28,24,0.35) 40%, rgba(20,28,24,0.35) 60%, rgba(20,28,24,0.65) 100%)',
         }}
         aria-hidden="true"
       />
