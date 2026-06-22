@@ -373,10 +373,26 @@ export const CONTACT_INFO = {
   phoneHref: 'tel:+18045550100',
   instagram: '@spruce_rva',
   instagramUrl: 'https://www.instagram.com/spruce_rva',
+  facebookUrl: 'https://www.facebook.com/sprucerva',
+  houzzUrl: 'https://www.houzz.com/pro/sprucerva',
+  linkedinUrl: 'https://www.linkedin.com/company/spruce-construction',
   boscobelUrl: 'https://www.boscobeltrace.com',
   mapEmbedUrl:
     'https://www.openstreetmap.org/export/embed.html?bbox=-77.487%2C37.555%2C-77.467%2C37.565&layer=mapnik&marker=37.5605%2C-77.477',
 }
+
+export interface SocialLink {
+  label: string
+  href: string
+  icon: 'Instagram' | 'Facebook' | 'Linkedin' | 'Houzz'
+}
+
+export const socialLinks: SocialLink[] = [
+  { label: 'Instagram', href: CONTACT_INFO.instagramUrl, icon: 'Instagram' },
+  { label: 'Facebook', href: CONTACT_INFO.facebookUrl, icon: 'Facebook' },
+  { label: 'Houzz', href: CONTACT_INFO.houzzUrl, icon: 'Houzz' },
+  { label: 'LinkedIn', href: CONTACT_INFO.linkedinUrl, icon: 'Linkedin' },
+]
 
 export const projectTypeOptions = [
   'New Build',

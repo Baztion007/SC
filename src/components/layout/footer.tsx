@@ -1,7 +1,8 @@
 'use client'
 
-import { Mail, MapPin, Phone, Instagram, ExternalLink, ArrowUpRight } from 'lucide-react'
+import { Mail, MapPin, Phone, ExternalLink } from 'lucide-react'
 import { LogoImage } from '@/components/logo-image'
+import { SocialLinks } from '@/components/social-links'
 import { useNavStore } from '@/lib/store'
 import { CONTACT_INFO, NAV_ITEMS } from '@/lib/content'
 
@@ -12,22 +13,13 @@ export function Footer() {
     <footer className="mt-auto border-t border-border bg-secondary/40">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 md:py-16">
         <div className="grid gap-10 md:grid-cols-3 md:gap-8">
-          {/* Brand + tagline */}
-          <div className="space-y-4">
-            <LogoImage variant="footer" />
+          {/* Brand + tagline + socials */}
+          <div className="space-y-5">
+            <LogoImage variant="footer" priority />
             <p className="max-w-xs text-sm text-muted-foreground text-pretty">
               Custom residential homebuilder in Richmond &amp; the Northern Neck of Virginia.
             </p>
-            <a
-              href={CONTACT_INFO.instagramUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-medium text-foreground transition-colors hover:text-primary"
-            >
-              <Instagram className="size-4" />
-              {CONTACT_INFO.instagram}
-              <ArrowUpRight className="size-3" />
-            </a>
+            <SocialLinks variant="icons" />
           </div>
 
           {/* Quick links */}
