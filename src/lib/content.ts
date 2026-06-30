@@ -24,7 +24,7 @@ export const projects: Project[] = [
     tagline: 'Historic Tudor Whole-Home Renovation',
     description:
       'A meticulous restoration of a historic Tudor home, preserving its architectural heritage while modernizing every system and surface for contemporary family life.',
-    image: '/images/projects/palmyra.jpg',
+    image: '/images/projects/palmyra-real.jpg',
     location: 'Richmond, VA',
     featured: true,
     press: ['Featured in Traditional Home'],
@@ -36,7 +36,7 @@ export const projects: Project[] = [
     tagline: 'Scandinavian Modern New Build',
     description:
       'A light-filled Scandinavian modern new build emphasizing clean lines, natural materials, and a seamless connection between interior and landscape.',
-    image: '/images/projects/cherokee.jpg',
+    image: '/images/projects/cherokee-real.jpg',
     location: 'Richmond, VA',
     featured: true,
     press: ['Featured by ModernRichmond'],
@@ -48,7 +48,7 @@ export const projects: Project[] = [
     tagline: 'Spruce Designer Whole-Home Renovation',
     description:
       'A designer-led whole-home renovation that reimagines a traditional floor plan with a chef-grade kitchen, open living areas, and refined material selections throughout.',
-    image: '/images/projects/erlwood.jpg',
+    image: '/images/projects/erlwood-real.jpg',
     location: 'Richmond, VA',
     featured: true,
   },
@@ -59,7 +59,7 @@ export const projects: Project[] = [
     tagline: 'Mid-Century Modern Whole-Home Renovation',
     description:
       'A respectful mid-century modern renovation that vaulted ceilings, restored a landmark stone fireplace, and reintroduced period-appropriate materials with modern performance.',
-    image: '/images/projects/south.jpg',
+    image: '/images/projects/south-real.jpg',
     location: 'Richmond, VA',
     featured: true,
     press: ['Featured by ModernRichmond'],
@@ -71,7 +71,7 @@ export const projects: Project[] = [
     tagline: 'Designer Artist Showcase Whole-Home Renovation',
     description:
       'A designer artist showcase whole-home renovation featuring a coffered dining room, custom built-ins, and a sophisticated neutral palette curated for entertaining.',
-    image: '/images/projects/york.jpg',
+    image: '/images/projects/york-real.jpg',
     location: 'Richmond, VA',
     featured: true,
   },
@@ -82,7 +82,7 @@ export const projects: Project[] = [
     tagline: 'Modern French Provincial Whole-Home Renovation',
     description:
       'A modern French provincial renovation balancing classic European symmetry with contemporary interiors, including a chef\u2019s kitchen and primary suite reimagined.',
-    image: '/images/projects/cragmont.jpg',
+    image: '/images/projects/cragmont-real.jpg',
     location: 'Richmond, VA',
   },
   {
@@ -92,7 +92,7 @@ export const projects: Project[] = [
     tagline: 'Historic Cottage Whole-Home Renovation',
     description:
       'A charming historic cottage whole-home renovation that preserved original details while reconfiguring the layout for modern flow and everyday livability.',
-    image: '/images/projects/lexington.jpg',
+    image: '/images/projects/lexington-real.jpg',
     location: 'Richmond, VA',
   },
   {
@@ -102,7 +102,7 @@ export const projects: Project[] = [
     tagline: 'Colonial Whole-Home Renovation',
     description:
       'A classic Colonial whole-home renovation with restored Georgian symmetry, a reimagined kitchen and butler\u2019s pantry, and a primary suite addition.',
-    image: '/images/projects/custis.jpg',
+    image: '/images/projects/custis-real.jpg',
     location: 'Richmond, VA',
   },
   {
@@ -112,7 +112,7 @@ export const projects: Project[] = [
     tagline: 'Classic Whole-Home Renovation',
     description:
       'A classic whole-home renovation featuring custom built-in bookcases, a marble fireplace, and elegant moldings throughout the principal rooms.',
-    image: '/images/projects/oxford.jpg',
+    image: '/images/projects/oxford-real.jpg',
     location: 'Richmond, VA',
     press: ['Featured in Home&Design Magazine'],
   },
@@ -123,7 +123,7 @@ export const projects: Project[] = [
     tagline: 'Historic Dutch Colonial Whole-Home Renovation',
     description:
       'A historic Dutch Colonial whole-home renovation that preserved the gambrel roofline and cedar shingles while modernizing the interior layout and systems.',
-    image: '/images/projects/laburnum.jpg',
+    image: '/images/projects/laburnum-real.jpg',
     location: 'Richmond, VA',
   },
   {
@@ -133,7 +133,7 @@ export const projects: Project[] = [
     tagline: 'Architect\u2019s Craftsman Whole-Home Renovation',
     description:
       'An architect\u2019s craftsman whole-home renovation restoring tapered stone columns, exposed rafters, and a deep porch, with a fully reimagined interior.',
-    image: '/images/projects/laburnum-craftsman.jpg',
+    image: '/images/projects/laburnum-craftsman-real.jpg',
     location: 'Richmond, VA',
   },
   {
@@ -143,7 +143,7 @@ export const projects: Project[] = [
     tagline: 'Traditional Whole-Home Renovation',
     description:
       'A traditional whole-home renovation with custom white cabinetry, a large center island, and a farmhouse sink anchoring the reimagined kitchen.',
-    image: '/images/projects/carriage.jpg',
+    image: '/images/projects/carriage-real.jpg',
     location: 'Richmond, VA',
   },
   {
@@ -153,7 +153,7 @@ export const projects: Project[] = [
     tagline: 'Designer New Build',
     description:
       'A designer new build of modern farmhouse row homes with board-and-batten siding, black metal roofs, and large picture windows flooding the interiors.',
-    image: '/images/projects/charles.jpg',
+    image: '/images/projects/charles-real.jpg',
     location: 'Richmond, VA',
   },
   {
@@ -163,7 +163,7 @@ export const projects: Project[] = [
     tagline: 'Richmond Traditional New Build',
     description:
       'A Richmond traditional new build with red brick facade, white columns, and southern colonial proportions tailored to its established neighborhood.',
-    image: '/images/projects/cragmont-circle.jpg',
+    image: '/images/projects/cragmont-circle-real.jpg',
     location: 'Richmond, VA',
   },
 ]
@@ -335,6 +335,12 @@ export interface Testimonial {
 export const testimonials: Testimonial[] = [
   {
     quote:
+      'We have been so impressed with Spruce! They are starting our project in the coming weeks and the level of professionalism and care has been outstanding from day one.',
+    author: 'Mckenzie Woodard',
+    role: 'Google Review · 5 stars',
+  },
+  {
+    quote:
       'Spruce treated our 1920s home with more care than we thought possible. Every detail was considered, every trade was held to a standard, and the result is a house that feels both completely new and completely itself.',
     author: 'The Marsh Family',
     role: 'Whole-Home Renovation, Richmond',
@@ -345,13 +351,14 @@ export const testimonials: Testimonial[] = [
     author: 'David & Anne',
     role: 'Custom New Build, Manakin Sabot',
   },
-  {
-    quote:
-      'We have referred Spruce to half our neighborhood. They are the rare builder who cares as much about the character of the street as they do about the house they are building.',
-    author: 'The Castles',
-    role: 'Historic Renovation, Richmond',
-  },
 ]
+
+// Google Reviews rating summary (from Google Business Profile)
+export const googleRating = {
+  score: 4.4,
+  reviewCount: 7,
+  url: 'https://www.google.com/maps/place/Spruce+Construction/@37.5592929,-77.47238,16z',
+}
 
 // Stats
 export interface Stat {
@@ -370,8 +377,8 @@ export const CONTACT_INFO = {
   address: '526 N. Arthur Ashe Blvd., Richmond, Virginia 23220',
   addressShort: '526 N. Arthur Ashe Blvd., Richmond, VA 23220',
   email: 'carey@sprucerva.com',
-  phone: '(804) 555-0100',
-  phoneHref: 'tel:+18045550100',
+  phone: '(804) 316-3667',
+  phoneHref: 'tel:+18043163667',
   instagram: '@spruce_rva',
   instagramUrl: 'https://www.instagram.com/spruce_rva',
   facebookUrl: 'https://www.facebook.com/sprucerva',
