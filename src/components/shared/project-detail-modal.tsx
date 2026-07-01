@@ -22,11 +22,13 @@ export function ProjectDetailModal() {
   const [activeImageIdx, setActiveImageIdx] = useState(0)
   const [lightboxOpen, setLightboxOpen] = useState(false)
 
-  // Build the gallery array: cover image + gallery images (deduplicated)
+  // Build the gallery array. The cover image (-real.jpg) is often the same
+  // photo as gallery image #1, so we skip the cover and just use the gallery
+  // images to avoid showing a duplicate. If no gallery exists, fall back to cover.
   const allImages = project
-    ? [project.image, ...(project.gallery || [])].filter(
-        (v, i, a) => a.indexOf(v) === i
-      )
+    ? (project.gallery && project.gallery.length > 0
+        ? project.gallery
+        : [project.image])
     : []
 
   // Reset to first image when project changes
