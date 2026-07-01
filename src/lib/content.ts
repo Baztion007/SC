@@ -25,9 +25,9 @@ export const projects: Project[] = [
     tagline: 'Historic Tudor Whole-Home Renovation',
     description:
       'A meticulous restoration of a historic Tudor home, preserving its architectural heritage while modernizing every system and surface for contemporary family life.',
-    image: '/images/projects/palmyra/2.jpg',
+    image: '/images/projects/palmyra/1.jpg',
     gallery: [
-          "/images/projects/palmyra/1.jpg",
+          "/images/projects/palmyra/2.jpg",
           "/images/projects/palmyra/3.jpg",
           "/images/projects/palmyra/4.jpg",
           "/images/projects/palmyra/5.jpg",
@@ -47,9 +47,9 @@ export const projects: Project[] = [
     tagline: 'Scandinavian Modern New Build',
     description:
       'A light-filled Scandinavian modern new build emphasizing clean lines, natural materials, and a seamless connection between interior and landscape.',
-    image: '/images/projects/cherokee/2.jpg',
+    image: '/images/projects/cherokee/1.jpg',
     gallery: [
-          "/images/projects/cherokee/1.jpg",
+          "/images/projects/cherokee/2.jpg",
           "/images/projects/cherokee/3.jpg",
           "/images/projects/cherokee/4.jpg",
           "/images/projects/cherokee/5.jpg",
@@ -69,9 +69,9 @@ export const projects: Project[] = [
     tagline: 'Spruce Designer Whole-Home Renovation',
     description:
       'A designer-led whole-home renovation that reimagines a traditional floor plan with a chef-grade kitchen, open living areas, and refined material selections throughout.',
-    image: '/images/projects/erlwood/2.jpg',
+    image: '/images/projects/erlwood/1.jpg',
     gallery: [
-          "/images/projects/erlwood/1.jpg",
+          "/images/projects/erlwood/2.jpg",
           "/images/projects/erlwood/3.jpg",
           "/images/projects/erlwood/4.jpg",
           "/images/projects/erlwood/5.jpg",
@@ -90,9 +90,9 @@ export const projects: Project[] = [
     tagline: 'Mid-Century Modern Whole-Home Renovation',
     description:
       'A respectful mid-century modern renovation that vaulted ceilings, restored a landmark stone fireplace, and reintroduced period-appropriate materials with modern performance.',
-    image: '/images/projects/south/2.jpg',
+    image: '/images/projects/south/1.jpg',
     gallery: [
-          "/images/projects/south/1.jpg",
+          "/images/projects/south/2.jpg",
           "/images/projects/south/3.jpg",
           "/images/projects/south/4.jpg",
           "/images/projects/south/5.jpg",
@@ -112,9 +112,9 @@ export const projects: Project[] = [
     tagline: 'Designer Artist Showcase Whole-Home Renovation',
     description:
       'A designer artist showcase whole-home renovation featuring a coffered dining room, custom built-ins, and a sophisticated neutral palette curated for entertaining.',
-    image: '/images/projects/york/2.jpg',
+    image: '/images/projects/york/1.jpg',
     gallery: [
-          "/images/projects/york/1.jpg",
+          "/images/projects/york/2.jpg",
           "/images/projects/york/3.jpg",
           "/images/projects/york/4.jpg",
           "/images/projects/york/5.jpg",
@@ -133,9 +133,9 @@ export const projects: Project[] = [
     tagline: 'Modern French Provincial Whole-Home Renovation',
     description:
       'A modern French provincial renovation balancing classic European symmetry with contemporary interiors, including a chef\u2019s kitchen and primary suite reimagined.',
-    image: '/images/projects/cragmont/2.jpg',
+    image: '/images/projects/cragmont/1.jpg',
     gallery: [
-          "/images/projects/cragmont/1.jpg",
+          "/images/projects/cragmont/2.jpg",
           "/images/projects/cragmont/3.jpg",
           "/images/projects/cragmont/4.jpg",
           "/images/projects/cragmont/5.jpg",
@@ -153,9 +153,9 @@ export const projects: Project[] = [
     tagline: 'Historic Cottage Whole-Home Renovation',
     description:
       'A charming historic cottage whole-home renovation that preserved original details while reconfiguring the layout for modern flow and everyday livability.',
-    image: '/images/projects/lexington/2.jpg',
+    image: '/images/projects/lexington/1.jpg',
     gallery: [
-          "/images/projects/lexington/1.jpg",
+          "/images/projects/lexington/2.jpg",
           "/images/projects/lexington/3.jpg",
           "/images/projects/lexington/4.jpg",
           "/images/projects/lexington/5.jpg",
@@ -173,9 +173,9 @@ export const projects: Project[] = [
     tagline: 'Colonial Whole-Home Renovation',
     description:
       'A classic Colonial whole-home renovation with restored Georgian symmetry, a reimagined kitchen and butler\u2019s pantry, and a primary suite addition.',
-    image: '/images/projects/custis/2.jpg',
+    image: '/images/projects/custis/1.jpg',
     gallery: [
-          "/images/projects/custis/1.jpg",
+          "/images/projects/custis/2.jpg",
           "/images/projects/custis/3.jpg",
           "/images/projects/custis/4.jpg",
           "/images/projects/custis/5.jpg",
@@ -193,9 +193,9 @@ export const projects: Project[] = [
     tagline: 'Classic Whole-Home Renovation',
     description:
       'A classic whole-home renovation featuring custom built-in bookcases, a marble fireplace, and elegant moldings throughout the principal rooms.',
-    image: '/images/projects/oxford/2.jpg',
+    image: '/images/projects/oxford/1.jpg',
     gallery: [
-          "/images/projects/oxford/1.jpg",
+          "/images/projects/oxford/2.jpg",
           "/images/projects/oxford/3.jpg",
           "/images/projects/oxford/4.jpg",
           "/images/projects/oxford/5.jpg",
@@ -214,9 +214,9 @@ export const projects: Project[] = [
     tagline: 'Historic Dutch Colonial Whole-Home Renovation',
     description:
       'A historic Dutch Colonial whole-home renovation that preserved the gambrel roofline and cedar shingles while modernizing the interior layout and systems.',
-    image: '/images/projects/laburnum/2.jpg',
+    image: '/images/projects/laburnum/1.jpg',
     gallery: [
-          "/images/projects/laburnum/1.jpg",
+          "/images/projects/laburnum/2.jpg",
           "/images/projects/laburnum/3.jpg",
           "/images/projects/laburnum/4.jpg",
           "/images/projects/laburnum/5.jpg",
@@ -234,9 +234,9 @@ export const projects: Project[] = [
     tagline: 'Architect\u2019s Craftsman Whole-Home Renovation',
     description:
       'An architect\u2019s craftsman whole-home renovation restoring tapered stone columns, exposed rafters, and a deep porch, with a fully reimagined interior.',
-    image: '/images/projects/laburnum-craftsman/2.jpg',
+    image: '/images/projects/laburnum-craftsman/1.jpg',
     gallery: [
-          "/images/projects/laburnum-craftsman/1.jpg",
+          "/images/projects/laburnum-craftsman/2.jpg",
           "/images/projects/laburnum-craftsman/3.jpg",
           "/images/projects/laburnum-craftsman/4.jpg",
           "/images/projects/laburnum-craftsman/5.jpg",
@@ -254,15 +254,14 @@ export const projects: Project[] = [
     tagline: 'Traditional Whole-Home Renovation',
     description:
       'A traditional whole-home renovation with custom white cabinetry, a large center island, and a farmhouse sink anchoring the reimagined kitchen.',
-    image: '/images/projects/carriage/2.jpg',
+    image: '/images/projects/carriage/1.jpg',
     gallery: [
-          "/images/projects/carriage/1.jpg",
+          "/images/projects/carriage/2.jpg",
           "/images/projects/carriage/3.jpg",
           "/images/projects/carriage/4.jpg",
           "/images/projects/carriage/5.jpg",
           "/images/projects/carriage/6.jpg",
-          "/images/projects/carriage/7.jpg",
-          "/images/projects/carriage/8.jpg"
+          "/images/projects/carriage/7.jpg"
     ],
     galleryUrl: 'https://postimg.cc/gallery/wT1jFnG',
     location: 'Richmond, VA',
@@ -274,9 +273,9 @@ export const projects: Project[] = [
     tagline: 'Designer New Build',
     description:
       'A designer new build of modern farmhouse row homes with board-and-batten siding, black metal roofs, and large picture windows flooding the interiors.',
-    image: '/images/projects/charles/2.jpg',
+    image: '/images/projects/charles/1.jpg',
     gallery: [
-          "/images/projects/charles/1.jpg",
+          "/images/projects/charles/2.jpg",
           "/images/projects/charles/3.jpg",
           "/images/projects/charles/4.jpg",
           "/images/projects/charles/5.jpg",
@@ -294,9 +293,9 @@ export const projects: Project[] = [
     tagline: 'Richmond Traditional New Build',
     description:
       'A Richmond traditional new build with red brick facade, white columns, and southern colonial proportions tailored to its established neighborhood.',
-    image: '/images/projects/cragmont-circle/2.jpg',
+    image: '/images/projects/cragmont-circle/1.jpg',
     gallery: [
-          "/images/projects/cragmont-circle/1.jpg",
+          "/images/projects/cragmont-circle/2.jpg",
           "/images/projects/cragmont-circle/3.jpg",
           "/images/projects/cragmont-circle/4.jpg",
           "/images/projects/cragmont-circle/5.jpg",
