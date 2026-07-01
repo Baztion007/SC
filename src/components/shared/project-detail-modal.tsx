@@ -131,30 +131,27 @@ export function ProjectDetailModal() {
                   )}
                 </div>
 
-                {/* Thumbnail strip */}
+                {/* Thumbnail strip — shows all images except the currently-active one
+                    (which is already displayed as the large main image above) */}
                 {allImages.length > 1 && (
                   <div className="flex gap-2 overflow-x-auto border-b border-border bg-secondary/30 p-3">
                     {allImages.map((img, idx) => (
-                      <button
-                        key={idx}
-                        onClick={() => setActiveImageIdx(idx)}
-                        className={cn(
-                          'relative size-16 shrink-0 overflow-hidden rounded-md ring-2 transition-all',
-                          idx === activeImageIdx
-                            ? 'ring-primary'
-                            : 'ring-transparent opacity-60 hover:opacity-100'
-                        )}
-                        aria-label={`View image ${idx + 1}`}
-                        aria-current={idx === activeImageIdx}
-                      >
-                        <Image
-                          src={img}
-                          alt={`${project.name} thumbnail ${idx + 1}`}
-                          fill
-                          sizes="64px"
-                          className="object-cover"
-                        />
-                      </button>
+                      idx === activeImageIdx ? null : (
+                        <button
+                          key={idx}
+                          onClick={() => setActiveImageIdx(idx)}
+                          className="relative size-16 shrink-0 overflow-hidden rounded-md ring-2 ring-transparent opacity-60 transition-all hover:opacity-100 hover:ring-primary"
+                          aria-label={`View image ${idx + 1}`}
+                        >
+                          <Image
+                            src={img}
+                            alt={`${project.name} thumbnail ${idx + 1}`}
+                            fill
+                            sizes="64px"
+                            className="object-cover"
+                          />
+                        </button>
+                      )
                     ))}
                   </div>
                 )}
